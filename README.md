@@ -85,7 +85,7 @@
 
 ​	(2)TINA选择了训一个模型，修正DDIM_inversion的中间变量$z_t$,
 
-​	我们站在“解ODE”的角度思考问题，对于$\epsilon$-prediction的方法采用`EDCIT`重构原图像，对于v-prediction的模型采用`flow-reverse`重构原图像
+​	我们站在“解ODE”的角度思考问题，对于$\epsilon$-prediction的方法采用`EDCIT`(理论误差为o(t^3)-o(t^3))重构原图像，对于v-prediction的模型采用`flow-reverse`重构原图像
 
 ​	(3)我们还在ESD上实现了NSFW(Erased Concepts)图像的editing任务
 ## 对于“没有意义”的解释   ※※※※※※※
