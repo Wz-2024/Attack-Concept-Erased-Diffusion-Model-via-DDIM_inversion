@@ -1,7 +1,7 @@
 # Attack  Concept Erased Diffusion Model via DDIM_inversion
 ## 前言
 
-​	看到这篇文章TINA: Text-Free Inversion Attack for Unlearned Text-to-Image Diffusion Models能被cvpr'26接受，我们(AISEC in XJTU)的内心其实是欣喜的。因为我们在2025年10月左右观察到了类似的现象。虽然处理方法与问题的思考角度略有不同，但出发点是完全相同的。
+​	看到这篇文章TINA: Text-Free Inversion Attack for Unlearned Text-to-Image Diffusion Models能被cvpr'26接受，我们(AISEC in XJTU)的内心其实是欣喜的。因为我们在2025年11月左右观察到了类似的现象。虽然处理方法与问题的思考角度略有不同，但出发点是完全相同的。
 
 ​	具体而言，我们也尝试了使用DDIM_Inversion这项技术攻击Concept Erased Diffusion Model，并且我们也尝试将condition条件设为空(cfg=1)。
 
