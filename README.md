@@ -69,7 +69,7 @@
 
 ​	将`ddim_noise`喂给ESD，设$cfg \neq 1$,然后给定`prompt=a naked girl is dancing`或者其他符合语境的prompt，看看ESD是否能够完成生成。
 
-​	在这次实验中，我们也没有很明确的预期结果。实验效果如下
+​	在这次实验中，我们没有很明确的预期结果。实验效果如下
 
 ​	失真的程度非常高，但是这种失真是可以通过cfg的线性调度来弥补(比如前几步采样用cfg=1，从而保证整体上与原始图像保持一致，后几步采用cfg=10,保证有编辑效果。或者采用linear递增，sublinear递增的调度)
 <img width="1170" height="597" alt="image" src="https://github.com/user-attachments/assets/db859420-d8cf-4c40-8fd3-a126b74ab6b3" />
