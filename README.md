@@ -95,7 +95,8 @@
 
 ​	首先明确一个点，Diffusion Model不是一个end2end模型，对于一个pretrained Diffuison Model来讲，完成各种方式的采样(epsilon-prediction有DDPM_sampling,DDIM_sampling等，v-prediction有eular-maruyama Sampling，Huen‘s Sampling )是非常正常的事情。那么如果给定了`ddim_noise`, pretrained diffusion model一定能够恢复原图，这件事情其实是与是否进行了概念擦除无关。
 
-​	更具体一点，我们上述的所有实验其实是在问`“这个Diffusion model有没有Encode+Decode能力？”`而不是`“这个ESD到底是否鲁棒?"`。
+​	更具体一点，我们上述的所有实验其实是在问`“这个Diffusion model有没有Encode+Decode能力？”`而不是在问`“这个ESD到底是否鲁棒?"`。
 
 ​	这也是后续没有将该实验继续向定量指标推进的根本原因。
+
 	从这个角度出发，我们完成的Editing任务其实也在混淆上述这两个问题。如果要进行text-free的攻击，我们应该做的事情应该类似于：假如ESD擦除的对象是**动物**，我们给定一张"狗"的图像，然后判断它能不能生成"猫","狮子"，"大象"等其他**动物**.
