@@ -87,7 +87,7 @@
 
 ​	我们站在“解ODE”的角度思考问题，对于$\epsilon$-prediction的模型采用`EDCIT`(理论误差为o(t^3)-o(t^3))重构原图像，对于v-prediction的模型采用`flow-reverse`重构原图像
 
-​	(3)我们还在ESD上实现了NSFW(Erased Concepts)图像的editing任务
+​	(3)我们还在ESD上实现了NSFW(Erased Concepts)图像的editing任务<br>
 	(4)其实,由于绝大部分Erase方法都是在cfg上训练的,因此,根据我们的猜想,只要给定的条件是文本无关/cfg无关(cfg=1)的,那就一定能够生成NSFW内容. 可以进行的尝试还有,a.提取LLM的最后几层feature输出,做特殊处理后和图像的模态对齐(详见Sana对LLM的处理,以及Flux双流架构相关的知识),b.利用IpAdapter c.其他能控制噪声init的,或者能在Unet/DiT pipeline中,与图像模态发生Cross attn或者Self attn的手段,都能够完成NSFW图像的生成
 ## 对于“没有意义”的解释   ※※※※※※※
 如果您捋顺了思路，上述这个五个实验的设计其实在十分钟内就能完成。我们也是这样，由于全程不需要train模型，整个5个exp仅仅是我们通宵一晚上的结果。(当然仅限于视觉效果，我们没有跑任何定量指标)
